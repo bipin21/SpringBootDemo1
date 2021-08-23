@@ -2,6 +2,7 @@ package com.example.demo1.dao;
 
 import com.example.demo1.model.Person;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -15,7 +16,7 @@ public interface PersonDao {
         return  insertPerson(id, person);
     }
 
-    List<Person> selectAllPeople();
+    List<Person> selectAllPeople() throws SQLException;
 
     Optional<Person> selectPersonById(UUID id);
 
